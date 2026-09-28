@@ -7,12 +7,18 @@ CONTAINER_NAME="pg_encode_uri_test_${PG_MAJOR}"
 
 cd "$(dirname "$0")/.."
 
+cleanup() {
+  docker rm -f "${CONTAINER_NAME}" >/dev/null 2>&1 || true
+}
+
 docker build --build-arg PG_MAJOR="${PG_MAJOR}" \
   -t "${IMAGE_NAME}" \
   -f test/Dockerfile \
   .
 
 docker rm -f "${CONTAINER_NAME}" >/dev/null 2>&1 || true
+
+trap cleanup EXIT
 
 docker run -d \
   --name "${CONTAINER_NAME}" \
@@ -37,5 +43,3 @@ docker exec -u postgres -e PGHOST=/var/run/postgresql -e PGUSER=postgres "${CONT
   cd /usr/src/pg_encode_uri
   make installcheck
 '
-
-docker rm -f "${CONTAINER_NAME}" >/dev/null 2>&1 || true

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "release_status": "testing",
   "license": "postgresql",
-  "maintainer": "TODO: add maintainer",
+  "maintainer": "Tilman Vogel <tilman.vogel@web.de>",
   "provides": {
     "pg_encode_uri": {
       "file": "sql/pg_encode_uri--1.0.sql",
@@ -14,8 +14,8 @@
   },
   "resources": {
     "repository": {
-      "url": "https://github.com/your-org/pg-encode-uri.git",
-      "web": "https://github.com/your-org/pg-encode-uri",
+      "url": "https://github.com/tvogel/pg-encode-uri.git",
+      "web": "https://github.com/tvogel/pg-encode-uri",
       "type": "git"
     }
   },
