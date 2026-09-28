@@ -1,0 +1,3 @@
+comment = 'RFC 3986 percent-encoding helpers (encodeURIComponent/encodeURI equivalents)'
+default_version = '1.0'
+relocatable = true

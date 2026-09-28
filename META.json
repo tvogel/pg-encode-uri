@@ -1,0 +1,33 @@
+{
+  "name": "pg_encode_uri",
+  "abstract": "RFC 3986 percent-encoding helpers mirroring JavaScript's encodeURIComponent() / encodeURI()",
+  "version": "1.0.0",
+  "release_status": "testing",
+  "license": "postgresql",
+  "maintainer": "TODO: add maintainer",
+  "provides": {
+    "pg_encode_uri": {
+      "file": "sql/pg_encode_uri--1.0.sql",
+      "version": "1.0.0",
+      "abstract": "RFC 3986 percent-encoding helpers"
+    }
+  },
+  "resources": {
+    "repository": {
+      "url": "https://github.com/your-org/pg-encode-uri.git",
+      "web": "https://github.com/your-org/pg-encode-uri",
+      "type": "git"
+    }
+  },
+  "prereqs": {
+    "runtime": {
+      "requires": []
+    },
+    "test": {
+      "requires": {
+        "pgtap": 0
+      }
+    }
+  },
+  "generated_by": "pg_encode_uri project scaffold"
+}
